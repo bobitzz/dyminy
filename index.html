@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Dyminy — Noclegi, wesela, konferencje i imprezy w Kielcach</title>
+<meta name="description" content="Hotel Dyminy w Kielcach: 40 komfortowych pokoi, sala bankietowo-konferencyjna na 300 gości, bezpłatny parking. Wesela, komunie, konferencje i wygodny nocleg przy trasie E73.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-deep:#0F1E36;
+  --navy:#1B3559;
+  --navy-soft:#2C4B73;
+  --cream:#F6F1E6;
+  --cream-dark:#EDE3CC;
+  --white:#FFFFFF;
+  --gold:#B8894E;
+  --gold-light:#DCB877;
+  --gold-pale:#EFD9AE;
+  --ink:#231F1B;
+  --stone:#7C7568;
+  --line: rgba(35,32,27,0.12);
+  --line-light: rgba(255,255,255,0.18);
+  --shadow-soft: 0 18px 50px -22px rgba(15,30,54,0.35);
+  --shadow-strong: 0 30px 70px -25px rgba(15,30,54,0.55);
+  --radius-s: 10px;
+  --radius-m: 16px;
+  --radius-l: 28px;
+  --container: 1180px;
+  --ff-display: 'Fraunces', Georgia, serif;
+  --ff-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --header-h: 84px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+}
+html{overflow-x:hidden;}
+body{
+  margin:0;
+  font-family:var(--ff-body);
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  width:100%;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{margin:0;padding:0;list-style:none;}
+h1,h2,h3,h4{font-family:var(--ff-display);font-weight:600;margin:0;color:var(--navy-deep);}
+p{margin:0;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+input,textarea,select{font-family:inherit;font-size:1rem;}
+section{position:relative;}
+.container{max-width:var(--container);margin:0 auto;padding:0 28px;min-width:0;}
+.italic-accent{font-style:italic;font-weight:400;color:var(--gold);}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
+  outline:2.5px solid var(--gold);
+  outline-offset:3px;
+  border-radius:4px;
+}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:0.78rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:700;
+  margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);}
+.eyebrow.on-dark{color:var(--gold-light);}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:15px 30px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:0.97rem;
+  white-space:nowrap;
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
+}
+.btn-primary{
+  background:var(--gold);
+  color:var(--navy-deep);
+  box-shadow:0 14px 30px -12px rgba(184,137,78,0.6);
+}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 18px 36px -12px rgba(184,137,78,0.7);}
+.btn-outline-dark{
+  border:1.5px solid var(--navy-deep);
+  color:var(--navy-deep);
+  background:transparent;
+}
+.btn-outline-dark:hover{background:var(--navy-deep);color:var(--cream);transform:translateY(-2px);}
+.btn-outline-light{
+  border:1.5px solid var(--line-light);
+  color:var(--white);
+  background:rgba(255,255,255,0.04);
+}
+.btn-outline-light:hover{background:rgba(255,255,255,0.12);border-color:var(--gold-light);transform:translateY(-2px);}
+.btn-text{
+  display:inline-flex;align-items:center;gap:8px;
+  font-weight:600;color:var(--navy-deep);
+  border-bottom:1.5px solid var(--gold);
+  padding-bottom:2px;
+}
+.btn-text:hover{color:var(--gold);}
+.btn-sm{padding:11px 20px;font-size:0.88rem;}
+
+.site-header{
+  position:fixed;top:0;left:0;right:0;
+  z-index:500;
+  background:transparent;
+  transition:background .35s ease, box-shadow .35s ease, padding .35s ease;
+  padding:22px 0;
+}
+.site-header.scrolled{
+  background:rgba(15,30,54,0.92);
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px -18px rgba(0,0,0,0.5);
+  padding:12px 0;
+}
+.nav-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.brand{
+  font-family:var(--ff-display);
+  font-size:1.45rem;
+  font-weight:600;
+  color:var(--white);
+  letter-spacing:0.01em;
+  display:flex;
+  flex-direction:column;
+  line-height:1.05;
+}
+.brand small{
+  font-family:var(--ff-body);
+  font-size:0.6rem;
+  font-weight:600;
+  letter-spacing:0.22em;
+  color:var(--gold-light);
+  margin-top:4px;
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+.nav-links a{
+  font-size:0.92rem;
+  font-weight:500;
+  color:rgba(255,255,255,0.86);
+  transition:color .2s ease;
+  position:relative;
+}
+.nav-links a:hover{color:var(--gold-light);}
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.nav-phone{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:var(--white);
+  font-weight:600;
+  font-size:0.92rem;
+}
+.nav-phone svg{flex-shrink:0;}
+.nav-toggle{
+  display:none;
+  width:44px;height:44px;
+  align-items:center;justify-content:center;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  color:var(--white);
+}
+.mobile-panel{
+  position:fixed;inset:0;
+  background:var(--navy-deep);
+  z-index:600;
+  display:flex;flex-direction:column;
+  padding:26px 28px;
+  transform:translateY(-100%);
+  visibility:hidden;
+  pointer-events:none;
+  transition:transform .4s cubic-bezier(.4,0,.2,1), visibility 0s linear .4s;
+}
+.mobile-panel.open{
+  transform:translateY(0);
+  visibility:visible;
+  pointer-events:auto;
+  transition:transform .4s cubic-bezier(.4,0,.2,1), visibility 0s linear 0s;
+}
+.mobile-panel-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;}
+.mobile-panel a.brand{color:var(--white);}
+.mobile-close{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.08);color:var(--white);display:flex;align-items:center;justify-content:center;}
+.mobile-links{display:flex;flex-direction:column;gap:6px;}
+.mobile-links a{
+  font-family:var(--ff-display);
+  font-size:1.7rem;
+  color:var(--white);
+  padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.mobile-foot{margin-top:auto;display:flex;flex-direction:column;gap:14px;padding-top:24px;}
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:flex-end;
+  background-color:var(--navy-deep);
+  background-image:
+    linear-gradient(180deg, rgba(15,30,54,0.55) 0%, rgba(15,30,54,0.35) 38%, rgba(15,22,38,0.92) 100%),
+    url('http://www.hoteldyminy.pl/uploads/gals/galeria__0_26019800_1472647440/bg_image_0_77121800_1474472869.jpg');
+  background-size:cover;
+  background-position:center;
+  padding-top:calc(var(--header-h) + 40px);
+  padding-bottom:140px;
+}
+.hero-inner{max-width:760px;}
+.hero h1{
+  font-size:clamp(2.5rem, 5.4vw, 4.1rem);
+  color:var(--white);
+  line-height:1.08;
+  font-weight:600;
+  margin-bottom:24px;
+  letter-spacing:-0.01em;
+}
+.hero p.lead{
+  color:rgba(255,255,255,0.86);
+  font-size:1.18rem;
+  line-height:1.65;
+  max-width:560px;
+  margin-bottom:36px;
+}
+.hero-ctas{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-bottom:46px;
+}
+.hero-trust{
+  display:flex;
+  flex-wrap:wrap;
+  gap:28px 38px;
+}
+.hero-trust .item{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+}
+.hero-trust .num{
+  font-family:var(--ff-display);
+  font-size:1.7rem;
+  color:var(--gold-light);
+  font-weight:600;
+}
+.hero-trust .lbl{
+  font-size:0.82rem;
+  color:rgba(255,255,255,0.7);
+  max-width:120px;
+  line-height:1.3;
+}
+.booking-bar{
+  position:relative;
+  z-index:40;
+  margin:-92px auto 0;
+  max-width:var(--container);
+  padding:0 28px;
+}
+.booking-card{
+  background:var(--white);
+  border-radius:var(--radius-l);
+  box-shadow:var(--shadow-strong);
+  border-top:4px solid var(--gold);
+  padding:34px 36px;
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr)) auto;
+  gap:22px;
+  align-items:end;
+}
+.bk-field{display:flex;flex-direction:column;gap:8px;min-width:0;}
+.bk-field label{
+  font-size:0.74rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  font-weight:700;
+  color:var(--stone);
+}
+.bk-field .control{
+  display:flex;align-items:center;gap:10px;
+  border-bottom:1.5px solid var(--line);
+  padding-bottom:10px;
+  font-weight:600;
+  color:var(--navy-deep);
+}
+.bk-field .control svg{color:var(--gold);flex-shrink:0;}
+.bk-field select,.bk-field input{
+  border:none;background:none;width:100%;font-weight:600;color:var(--navy-deep);min-width:0;
+}
+.booking-card .btn{width:100%;}
+
+.section-head{
+  max-width:620px;
+  margin-bottom:54px;
+}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+.section-head h2{
+  font-size:clamp(1.9rem, 3.3vw, 2.65rem);
+  line-height:1.2;
+}
+.section-head p{
+  margin-top:18px;
+  color:var(--stone);
+  font-size:1.06rem;
+  line-height:1.7;
+}
+.section-pad{padding:120px 0;}
+@media (max-width:900px){.section-pad{padding:84px 0;}}
+.ornament{
+  display:flex;align-items:center;justify-content:center;gap:14px;
+  margin:0 auto 0;
+  color:var(--gold);
+}
+.ornament .line{width:54px;height:1px;background:var(--gold-pale);}
+
+.about{background:var(--cream);padding-top:170px;}
+.about-grid{
+  display:grid;
+  grid-template-columns:minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap:70px;
+  align-items:center;
+}
+.about-text p{
+  color:var(--ink);
+  font-size:1.07rem;
+  line-height:1.8;
+  margin-bottom:18px;
+}
+.about-photo{
+  position:relative;
+  border-radius:var(--radius-l);
+  overflow:hidden;
+  aspect-ratio:4/5;
+  background:var(--navy-soft);
+  box-shadow:var(--shadow-soft);
+}
+.about-photo img{width:100%;height:100%;object-fit:cover;}
+.about-photo .badge{
+  position:absolute;left:24px;bottom:24px;
+  background:rgba(15,30,54,0.85);
+  backdrop-filter:blur(6px);
+  color:var(--white);
+  padding:16px 20px;
+  border-radius:var(--radius-m);
+  border-left:3px solid var(--gold);
+}
+.about-photo .badge .n{font-family:var(--ff-display);font-size:1.5rem;color:var(--gold-light);}
+.about-photo .badge .t{font-size:0.78rem;color:rgba(255,255,255,0.8);}
+.stat-row{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:1px;
+  background:var(--line);
+  border-radius:var(--radius-m);
+  overflow:hidden;
+  margin-top:54px;
+}
+.stat-tile{
+  background:var(--cream);
+  padding:30px 22px;
+  text-align:center;
+}
+.stat-tile .n{font-family:var(--ff-display);font-size:2.2rem;color:var(--navy-deep);}
+.stat-tile .l{font-size:0.85rem;color:var(--stone);margin-top:6px;}
+
+.bento{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+}
+.bento-card{
+  background:var(--white);
+  border-radius:var(--radius-m);
+  padding:32px 28px;
+  border:1px solid var(--line);
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.bento-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-soft);border-color:transparent;}
+.bento-icon{
+  width:50px;height:50px;
+  border-radius:50%;
+  background:var(--cream-dark);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);
+  margin-bottom:20px;
+}
+.bento-card h3{font-size:1.18rem;margin-bottom:10px;}
+.bento-card p{color:var(--stone);font-size:0.96rem;line-height:1.65;}
+
+.room-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:64px;
+  align-items:center;
+  padding:48px 0;
+  border-bottom:1px solid var(--line);
+}
+.room-row:last-child{border-bottom:none;}
+.room-row:nth-child(even) .room-photo{order:2;}
+.room-photo{
+  position:relative;
+  border-radius:var(--radius-l);
+  overflow:hidden;
+  aspect-ratio:5/4;
+  background:var(--navy-soft);
+  box-shadow:var(--shadow-soft);
+}
+.room-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.room-row:hover .room-photo img{transform:scale(1.05);}
+.room-cap{
+  position:absolute;top:22px;left:22px;
+  width:62px;height:62px;border-radius:50%;
+  background:var(--gold);
+  color:var(--navy-deep);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 10px 24px -10px rgba(184,137,78,0.7);
+}
+.room-cap .n{font-family:var(--ff-display);font-size:1.5rem;line-height:1;font-weight:700;}
+.room-cap .s{font-size:0.55rem;text-transform:uppercase;letter-spacing:0.05em;font-weight:700;}
+.room-info h3{font-size:1.65rem;margin-bottom:14px;}
+.room-info p.desc{color:var(--stone);margin-bottom:22px;line-height:1.7;}
+.amenity-tags{
+  display:flex;flex-wrap:wrap;gap:10px;
+  margin-bottom:26px;
+}
+.amenity-tags span{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--cream-dark);
+  color:var(--navy-deep);
+  font-size:0.84rem;
+  font-weight:500;
+  padding:8px 14px;
+  border-radius:999px;
+}
+.amenity-tags svg{color:var(--gold);}
+.room-cta{display:flex;gap:16px;flex-wrap:wrap;}
+
+.hall{
+  background:var(--navy-deep);
+  color:var(--white);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 80% 0%, rgba(184,137,78,0.16), transparent 60%),
+    linear-gradient(160deg, var(--navy-deep) 0%, #0B1729 100%);
+}
+.hall .section-head h2{color:var(--white);}
+.hall .section-head p{color:rgba(255,255,255,0.72);}
+.hall-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:60px;
+  align-items:center;
+}
+.hall-photo-stack{position:relative;}
+.hall-photo-main{
+  border-radius:var(--radius-l);
+  overflow:hidden;
+  aspect-ratio:4/5;
+  box-shadow:var(--shadow-strong);
+}
+.hall-photo-main img{width:100%;height:100%;object-fit:cover;}
+.hall-photo-float{
+  position:absolute;
+  width:48%;
+  aspect-ratio:5/4;
+  bottom:-40px;left:-40px;
+  border-radius:var(--radius-m);
+  overflow:hidden;
+  border:5px solid var(--navy-deep);
+  box-shadow:var(--shadow-strong);
+}
+.hall-photo-float img{width:100%;height:100%;object-fit:cover;}
+.hall-capacity{
+  position:absolute;top:24px;right:24px;
+  background:rgba(15,30,54,0.85);
+  backdrop-filter:blur(8px);
+  border:1px solid var(--line-light);
+  border-radius:var(--radius-m);
+  padding:18px 22px;
+  text-align:center;
+}
+.hall-capacity .n{font-family:var(--ff-display);font-size:2.4rem;color:var(--gold-light);line-height:1;}
+.hall-capacity .l{font-size:0.72rem;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-top:4px;}
+.hall-text p.lead{
+  color:rgba(255,255,255,0.78);
+  font-size:1.08rem;
+  line-height:1.75;
+  margin-bottom:30px;
+}
+.occasion-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-bottom:32px;
+}
+.occasion-pill{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--line-light);
+  border-radius:var(--radius-s);
+  padding:14px 16px;
+  font-weight:500;
+  font-size:0.95rem;
+}
+.occasion-pill svg{color:var(--gold-light);flex-shrink:0;}
+.hall-perk{
+  display:flex;gap:14px;
+  background:rgba(184,137,78,0.12);
+  border:1px solid rgba(184,137,78,0.35);
+  border-radius:var(--radius-m);
+  padding:18px 20px;
+  margin-bottom:32px;
+}
+.hall-perk svg{flex-shrink:0;color:var(--gold-light);margin-top:2px;}
+.hall-perk p{font-size:0.93rem;color:rgba(255,255,255,0.85);line-height:1.6;}
+.hall-perk strong{color:var(--white);}
+.hall-ctas{display:flex;gap:16px;flex-wrap:wrap;}
+
+.amenity-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  border-radius:var(--radius-m);
+  overflow:hidden;
+}
+.amenity-cell{
+  background:var(--white);
+  padding:36px 26px;
+  display:flex;flex-direction:column;gap:16px;
+  transition:background .25s ease;
+}
+.amenity-cell:hover{background:var(--cream-dark);}
+.amenity-cell .ic{color:var(--gold);}
+.amenity-cell h4{font-size:1.02rem;font-weight:600;color:var(--navy-deep);}
+.amenity-cell p{font-size:0.86rem;color:var(--stone);line-height:1.55;}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  grid-auto-rows:170px;
+  gap:14px;
+}
+.gallery-grid figure{
+  margin:0;border-radius:var(--radius-m);overflow:hidden;
+  position:relative;background:var(--navy-soft);
+  cursor:zoom-in;
+}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.gallery-grid figure:hover img{transform:scale(1.08);}
+.gallery-grid figure::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, transparent 55%, rgba(15,30,54,0.55) 100%);
+  opacity:0;transition:opacity .3s ease;
+}
+.gallery-grid figure:hover::after{opacity:1;}
+.gallery-grid figure figcaption{
+  position:absolute;left:14px;bottom:12px;color:var(--white);
+  font-size:0.82rem;font-weight:600;opacity:0;transform:translateY(6px);
+  transition:opacity .3s ease, transform .3s ease;
+}
+.gallery-grid figure:hover figcaption{opacity:1;transform:translateY(0);}
+.g-big{grid-column:span 2;grid-row:span 2;}
+
+.lightbox{
+  position:fixed;inset:0;background:rgba(10,18,32,0.94);
+  z-index:900;display:none;align-items:center;justify-content:center;padding:40px;
+}
+.lightbox.open{display:flex;}
+.lightbox img{max-width:min(1100px,92vw);max-height:86vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,0.5);}
+.lightbox-close{position:absolute;top:26px;right:30px;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.1);color:#fff;display:flex;align-items:center;justify-content:center;}
+
+.biz{background:var(--cream-dark);}
+.biz-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,0.95fr);
+  gap:64px;
+  align-items:center;
+}
+.biz-list{display:flex;flex-direction:column;gap:16px;margin:30px 0 34px;}
+.biz-item{display:flex;gap:14px;align-items:flex-start;}
+.biz-item .chk{
+  flex-shrink:0;width:26px;height:26px;border-radius:50%;
+  background:var(--navy-deep);color:var(--gold-light);
+  display:flex;align-items:center;justify-content:center;margin-top:1px;
+}
+.biz-item p{font-size:0.98rem;color:var(--ink);line-height:1.55;}
+.biz-item strong{color:var(--navy-deep);}
+.biz-photo{
+  border-radius:var(--radius-l);
+  overflow:hidden;aspect-ratio:4/5;
+  box-shadow:var(--shadow-soft);
+}
+.biz-photo img{width:100%;height:100%;object-fit:cover;}
+
+.location-grid{
+  display:grid;
+  grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);
+  gap:50px;
+}
+.contact-card{
+  background:var(--white);
+  border-radius:var(--radius-l);
+  border:1px solid var(--line);
+  padding:38px;
+  box-shadow:var(--shadow-soft);
+}
+.contact-line{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:16px 0;
+  border-bottom:1px solid var(--line);
+}
+.contact-line:last-of-type{border-bottom:none;}
+.contact-line svg{color:var(--gold);flex-shrink:0;margin-top:3px;}
+.contact-line h4{font-size:0.95rem;color:var(--navy-deep);margin-bottom:3px;}
+.contact-line a, .contact-line span{font-size:0.93rem;color:var(--stone);}
+.contact-line a:hover{color:var(--gold);}
+.map-wrap{
+  border-radius:var(--radius-l);
+  overflow:hidden;
+  box-shadow:var(--shadow-soft);
+  min-height:420px;
+  filter:grayscale(0.15) sepia(0.08);
+}
+.map-wrap iframe{width:100%;height:100%;min-height:420px;border:0;display:block;}
+
+.reviews-track{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+}
+.review-card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius-m);
+  padding:30px 28px;
+}
+.review-stars{display:flex;gap:4px;color:var(--gold);margin-bottom:18px;}
+.review-card p.quote{font-size:1rem;line-height:1.7;color:var(--ink);margin-bottom:22px;min-height:96px;}
+.review-who{display:flex;align-items:center;gap:12px;}
+.review-avatar{
+  width:42px;height:42px;border-radius:50%;
+  background:var(--navy-deep);color:var(--gold-light);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--ff-display);font-weight:600;
+}
+.review-who .name{font-weight:700;font-size:0.92rem;color:var(--navy-deep);}
+.review-who .occ{font-size:0.8rem;color:var(--stone);}
+
+.faq-list{max-width:840px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{
+  width:100%;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:26px 4px;
+  text-align:left;
+  font-family:var(--ff-display);
+  font-size:1.15rem;
+  color:var(--navy-deep);
+}
+.faq-q .plus{
+  width:30px;height:30px;border-radius:50%;border:1.5px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;color:var(--gold);
+  flex-shrink:0;transition:transform .3s ease, background .3s ease, color .3s ease;
+}
+.faq-item.open .faq-q .plus{background:var(--gold);color:var(--navy-deep);transform:rotate(135deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.faq-a p{padding:0 4px 26px;color:var(--stone);line-height:1.7;max-width:720px;}
+
+.final-cta{
+  background:var(--navy-deep);
+  background-image:
+    linear-gradient(160deg, rgba(15,30,54,0.85), rgba(11,23,41,0.94)),
+    url('http://www.hoteldyminy.pl/uploads/off_dir/f317f55904c14d35b51b971670e5af23.jpg');
+  background-size:cover;background-position:center;
+  text-align:center;
+  padding:120px 0;
+}
+.final-cta h2{color:var(--white);font-size:clamp(2rem,4vw,2.9rem);margin-bottom:20px;}
+.final-cta p{color:rgba(255,255,255,0.78);font-size:1.1rem;max-width:560px;margin:0 auto 38px;}
+.final-cta-ctas{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;}
+
+.site-footer{background:#0B1626;color:rgba(255,255,255,0.7);padding:80px 0 0;}
+.footer-grid{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:50px;
+  padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.footer-brand .brand{margin-bottom:16px;}
+.footer-brand p{font-size:0.92rem;line-height:1.7;max-width:280px;color:rgba(255,255,255,0.6);}
+.footer-col h5{color:var(--white);font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px;font-weight:700;}
+.footer-col ul{display:flex;flex-direction:column;gap:12px;}
+.footer-col a{font-size:0.92rem;color:rgba(255,255,255,0.65);transition:color .2s;}
+.footer-col a:hover{color:var(--gold-light);}
+.footer-social{display:flex;gap:12px;margin-top:18px;}
+.footer-social a{
+  width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.06);
+  display:flex;align-items:center;justify-content:center;color:#fff;
+}
+.footer-social a:hover{background:var(--gold);color:var(--navy-deep);}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:26px 0;font-size:0.82rem;color:rgba(255,255,255,0.45);
+  flex-wrap:wrap;gap:10px;
+}
+
+.mobile-sticky{
+  display:none;
+  position:fixed;left:0;right:0;bottom:0;z-index:400;
+  background:var(--white);
+  border-top:1px solid var(--line);
+  box-shadow:0 -10px 30px -16px rgba(0,0,0,0.25);
+  padding:12px 16px;
+  gap:10px;
+}
+.mobile-sticky a{flex:1;}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+
+@media (max-width:1024px){
+  .about-grid,.hall-grid,.biz-grid,.location-grid{grid-template-columns:1fr;}
+  .room-row{grid-template-columns:1fr;gap:30px;}
+  .room-row:nth-child(even) .room-photo{order:0;}
+  .bento{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .amenity-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .reviews-track{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .g-big{grid-column:span 2;grid-row:span 1;}
+  .booking-card{grid-template-columns:1fr 1fr;}
+  .booking-card .btn{grid-column:span 2;}
+}
+@media (max-width:760px){
+  .nav-links,.nav-actions .nav-phone,.nav-actions .btn-primary{display:none;}
+  .nav-toggle{display:flex;}
+  .nav-row{gap:12px;}
+  .nav-actions{gap:10px;}
+  .brand{font-size:1.15rem;}
+  .brand small{font-size:0.52rem;letter-spacing:0.16em;}
+  .hero{padding-bottom:200px;min-height:auto;}
+  .hero h1{font-size:clamp(2.2rem,10vw,3.5rem);}
+  .hero p.lead{font-size:1.05rem;}
+  .hero-ctas,.hall-ctas,.final-cta-ctas,.room-ctas{flex-direction:column;align-items:stretch;}
+  .hero-ctas .btn,.hall-ctas .btn,.final-cta-ctas .btn,.room-ctas .btn{width:100%;}
+  .hero-trust{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+  .booking-bar{margin-top:-160px;}
+  .booking-card{grid-template-columns:1fr;padding:26px 22px;}
+  .booking-card .btn{grid-column:auto;}
+  .stat-row{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .bento{grid-template-columns:1fr;}
+  .amenity-grid{grid-template-columns:1fr 1fr;}
+  .occasion-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:140px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px;}
+  .mobile-sticky{display:flex;}
+  .section-pad{padding:64px 0;}
+  .about{padding-top:210px;}
+  .container{padding:0 20px;}
+  .hall-photo-float{display:none;}
+  body{padding-bottom:74px;}
+}
+@media (max-width:480px){
+  .hero h1{font-size:clamp(2rem,11vw,3rem);}
+  .hero p.lead{font-size:1rem;}
+  .hero-trust{grid-template-columns:1fr;}
+  .booking-bar{margin-top:-120px;}
+  .booking-card{padding:20px 16px;}
+  .gallery-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav-row">
+    <a href="#hero" class="brand">Hotel Dyminy<small>KIELCE · NOCLEGI &amp; EVENTY</small></a>
+    <nav class="nav-links">
+      <a href="#o-hotelu">O hotelu</a>
+      <a href="#pokoje">Pokoje</a>
+      <a href="#sala">Sala eventowa</a>
+      <a href="#udogodnienia">Udogodnienia</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#dla-firm">Dla firm</a>
+      <a href="#lokalizacja">Lokalizacja</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:+48413611400">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        41 36 11 400
+      </a>
+      <a href="#kontakt" class="btn btn-primary btn-sm">Zarezerwuj pobyt</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-top">
+    <span class="brand">Hotel Dyminy<small>KIELCE · NOCLEGI &amp; EVENTY</small></span>
+    <button class="mobile-close" id="mobileClose" aria-label="Zamknij menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-links">
+    <a href="#o-hotelu">O hotelu</a>
+    <a href="#pokoje">Pokoje</a>
+    <a href="#sala">Sala eventowa</a>
+    <a href="#udogodnienia">Udogodnienia</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#dla-firm">Dla firm</a>
+    <a href="#lokalizacja">Lokalizacja</a>
+    <a href="#opinie">Opinie</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="mobile-foot">
+    <a class="btn btn-primary" href="#kontakt">Zarezerwuj pobyt</a>
+    <a class="btn btn-outline-light" href="tel:+48413611400">Zadzwoń: 41 36 11 400</a>
+  </div>
+</div>
+
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <p class="eyebrow on-dark">HOTEL DYMINY · KIELCE, TRASA E73</p>
+      <h1>Wygodny nocleg. <span class="italic-accent">Przestronna sala</span> na wielkie chwile.</h1>
+      <p class="lead">40 komfortowych pokoi i sala bankietowo-konferencyjna dla 300 gości pod jednym dachem. Wesela, komunie, konferencje i zwykły dobry nocleg w trasie — zadbamy o każdy szczegół.</p>
+      <div class="hero-ctas">
+        <a href="#kontakt" class="btn btn-primary">Zarezerwuj pobyt</a>
+        <a href="#sala" class="btn btn-outline-light">Zapytaj o salę</a>
+      </div>
+      <div class="hero-trust">
+        <div class="item"><span class="num">2012</span><span class="lbl">rok otwarcia hotelu</span></div>
+        <div class="item"><span class="num">40</span><span class="lbl">komfortowych pokoi</span></div>
+        <div class="item"><span class="num">300</span><span class="lbl">miejsc w sali bankietowej</span></div>
+        <div class="item"><span class="num">3</span><span class="lbl">sale na różne okazje</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="booking-bar">
+  <div class="booking-card reveal">
+    <div class="bk-field">
+      <label>Przyjazd</label>
+      <div class="control">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <input type="date" aria-label="Data przyjazdu">
+      </div>
+    </div>
+    <div class="bk-field">
+      <label>Wyjazd</label>
+      <div class="control">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <input type="date" aria-label="Data wyjazdu">
+      </div>
+    </div>
+    <div class="bk-field">
+      <label>Goście</label>
+      <div class="control">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <select aria-label="Liczba gości">
+          <option>1 osoba</option>
+          <option selected>2 osoby</option>
+          <option>3 osoby</option>
+          <option>4 osoby</option>
+        </select>
+      </div>
+    </div>
+    <div class="bk-field">
+      <label>Cel pobytu</label>
+      <div class="control">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <select aria-label="Cel pobytu">
+          <option>Nocleg</option>
+          <option>Wesele</option>
+          <option>Konferencja / firma</option>
+          <option>Impreza rodzinna</option>
+        </select>
+      </div>
+    </div>
+    <a href="#kontakt" class="btn btn-primary">Sprawdź dostępność</a>
+  </div>
+</div>
+
+<section class="about section-pad" id="o-hotelu">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="eyebrow">O HOTELU</p>
+        <h2 style="font-size:clamp(1.9rem,3.3vw,2.5rem);margin-bottom:24px;">Kameralny hotel z dużym sercem do organizacji wydarzeń</h2>
+        <p>Hotel Dyminy działa w Kielcach od 2012 roku, tuż przy trasie E73 łączącej Kielce z Tarnowem. Dojazd z każdej strony Polski jest wygodny, a mimo to mieszczą się Państwo z dala od miejskiego zgiełku, w otoczeniu zieleni.</p>
+        <p>To miejsce stworzone z myślą o gościach biznesowych w trasie, rodzinach szukających spokojnego noclegu oraz parach planujących wesele życia. Do dyspozycji oddajemy 40 komfortowych pokoi, trzy sale — bankietową, konferencyjną i restauracyjną — oraz rozległy teren z miejscem na ognisko i grilla.</p>
+        <p>Cokolwiek Państwa do nas sprowadza, profesjonalny zespół zadba o to, by każdy szczegół pobytu był na swoim miejscu.</p>
+        <a href="#pokoje" class="btn-text" style="margin-top:10px;">Zobacz nasze pokoje
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="about-photo reveal">
+        <img src="http://www.hoteldyminy.pl/uploads/gals/galeria__0_26019800_1472647440/bg_image_0_90389300_1474472904.jpg" alt="Wnętrze Hotelu Dyminy" loading="lazy">
+        <div class="badge"><div class="n">od 2012</div><div class="t">budujemy zaufanie naszych gości</div></div>
+      </div>
+    </div>
+
+    <div class="stat-row reveal">
+      <div class="stat-tile"><div class="n">2012</div><div class="l">Rok otwarcia</div></div>
+      <div class="stat-tile"><div class="n">40</div><div class="l">Komfortowych pokoi</div></div>
+      <div class="stat-tile"><div class="n">300</div><div class="l">Miejsc w sali bankietowej</div></div>
+      <div class="stat-tile"><div class="n">3</div><div class="l">Sale na różne okazje</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="atuty" style="background:var(--cream-dark);">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">DLACZEGO WARTO</p>
+      <h2>Dlaczego goście wybierają Hotel Dyminy</h2>
+      <p>Sześć powodów, dla których warto zaplanować u nas nocleg, wesele albo spotkanie firmowe.</p>
+    </div>
+    <div class="bento">
+      <div class="bento-card reveal">
+        <div class="bento-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18"/><path d="M5 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Sala na 300 osób</h3>
+        <p>Wesela, konferencje, bale i przyjęcia rodzinne — pod jednym dachem, w jednej, elegancko aranżowanej przestrzeni.</p>
+      </div>
+      <div class="bento-card reveal">
+        <div class="bento-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="6" width="20" height="13" rx="2"/><path d="M3 11h18"/><circle cx="7" cy="15" r="1"/></svg></div>
+        <h3>Bezpłatny, duży parking</h3>
+        <p>Miejsce dla samochodów osobowych i autokarów — bez dodatkowych opłat, prosto przy obiekcie.</p>
+      </div>
+      <div class="bento-card reveal">
+        <div class="bento-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Wygodna lokalizacja</h3>
+        <p>Przy trasie E73 Kielce–Tarnów, blisko centrum miasta, targów i stoków narciarskich regionu świętokrzyskiego.</p>
+      </div>
+      <div class="bento-card reveal">
+        <div class="bento-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><circle cx="12" cy="12" r="5"/></svg></div>
+        <h3>Klimatyzowane pokoje</h3>
+        <p>Indywidualnie sterowana temperatura w każdym pokoju — komfort niezależnie od pory roku.</p>
+      </div>
+      <div class="bento-card reveal">
+        <div class="bento-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        <h3>Domowe śniadania</h3>
+        <p>Bufet szwedzki lub zestaw — w cenie pobytu, każdego ranka, na dobry początek dnia.</p>
+      </div>
+      <div class="bento-card reveal">
+        <div class="bento-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8 6 4 9 4 14a8 8 0 0 0 16 0c0-5-4-8-8-12z"/></svg></div>
+        <h3>Zielony teren z grillem</h3>
+        <p>Ognisko, wiata grillowa i przestrzeń do wypoczynku na świeżym powietrzu — idealne na integrację.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="pokoje">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">POKOJE</p>
+      <h2>Pokój dopasowany do Twoich potrzeb</h2>
+      <p>40 klimatyzowanych pokoi — jedno-, dwu- i trzyosobowych, każdy z własnym charakterem. Dla rodzin i grup przygotujemy wygodną aranżację na 4 osoby.</p>
+    </div>
+
+    <div class="room-row reveal">
+      <div class="room-photo">
+        <span class="room-cap"><span class="n">1</span><span class="s">osoba</span></span>
+        <img src="http://www.hoteldyminy.pl/uploads/pok_dir/dadf3ebb80982c907bb8c2f972fce636.jpg" alt="Pokój jednoosobowy w Hotelu Dyminy" loading="lazy">
+      </div>
+      <div class="room-info">
+        <h3>Pokój jednoosobowy</h3>
+        <p class="desc">Funkcjonalny pokój dla gości podróżujących w pojedynkę — wygodne łóżko, biurko do pracy i wszystko, czego potrzeba na spokojną noc lub dzień pracy w trasie.</p>
+        <div class="amenity-tags">
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M2 12h20"/></svg>Klimatyzacja</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><circle cx="12" cy="20" r="1"/></svg>Szybkie Wi-Fi</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg>TV LCD</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12V4a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/></svg>Biurko do pracy</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Łazienka z prysznicem</span>
+        </div>
+        <div class="room-cta">
+          <a href="#kontakt" class="btn btn-primary btn-sm">Sprawdź dostępność</a>
+          <span style="font-size:0.86rem;color:var(--stone);align-self:center;">Śniadanie i Wi-Fi w cenie</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-row reveal">
+      <div class="room-photo">
+        <span class="room-cap"><span class="n">2</span><span class="s">osoby</span></span>
+        <img src="http://www.hoteldyminy.pl/uploads/pok_dir/3fa2c0f938d4771e2719cf03226cfad9.jpg" alt="Pokój dwuosobowy w Hotelu Dyminy" loading="lazy">
+      </div>
+      <div class="room-info">
+        <h3>Pokój dwuosobowy</h3>
+        <p class="desc">Przestronny pokój z łóżkami pojedynczymi lub jednym łóżkiem podwójnym do wyboru — wygodna opcja dla par oraz znajomych podróżujących razem.</p>
+        <div class="amenity-tags">
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M2 12h20"/></svg>Klimatyzacja</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><circle cx="12" cy="20" r="1"/></svg>Szybkie Wi-Fi</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg>TV LCD</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>Łóżka do wyboru</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Łazienka z prysznicem</span>
+        </div>
+        <div class="room-cta">
+          <a href="#kontakt" class="btn btn-primary btn-sm">Sprawdź dostępność</a>
+          <span style="font-size:0.86rem;color:var(--stone);align-self:center;">Śniadanie i Wi-Fi w cenie</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-row reveal">
+      <div class="room-photo">
+        <span class="room-cap"><span class="n">3</span><span class="s">osoby</span></span>
+        <img src="http://www.hoteldyminy.pl/uploads/pok_dir/0c6659bab22eb32c4d56cf946c442158.jpg" alt="Pokój trzyosobowy w Hotelu Dyminy" loading="lazy">
+      </div>
+      <div class="room-info">
+        <h3>Pokój trzyosobowy</h3>
+        <p class="desc">Dobre rozwiązanie dla małych grup i rodzin — układ z łóżkiem podwójnym i pojedynczym lub trzema łóżkami pojedynczymi, do ustalenia przy rezerwacji.</p>
+        <div class="amenity-tags">
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M2 12h20"/></svg>Klimatyzacja</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><circle cx="12" cy="20" r="1"/></svg>Szybkie Wi-Fi</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg>TV LCD</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18"/><path d="M3 12h18"/><path d="M3 17h18"/></svg>Szafa i szafki nocne</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Łazienka z prysznicem</span>
+        </div>
+        <div class="room-cta">
+          <a href="#kontakt" class="btn btn-primary btn-sm">Sprawdź dostępność</a>
+          <span style="font-size:0.86rem;color:var(--stone);align-self:center;">Śniadanie i Wi-Fi w cenie</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-row reveal">
+      <div class="room-photo">
+        <span class="room-cap"><span class="n">4</span><span class="s">osoby</span></span>
+        <img src="http://www.hoteldyminy.pl/uploads/pok_dir/df0a7ef23f0476fc24806b59e3104df8.jpg" alt="Opcja rodzinna w Hotelu Dyminy" loading="lazy">
+      </div>
+      <div class="room-info">
+        <h3>Opcja rodzinna / grupowa <span style="font-family:var(--ff-body);font-size:0.85rem;font-weight:600;color:var(--stone);">(do 4 osób)</span></h3>
+        <p class="desc">Podróżujecie w czwórkę? W pokoju trzyosobowym przygotujemy wygodną dostawkę, a dla większej rodziny lub grupy zarezerwujemy dwa sąsiadujące pokoje. Napiszcie lub zadzwońcie — dobierzemy najwygodniejszy układ.</p>
+        <div class="amenity-tags">
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Dostawka na życzenie</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/></svg>Sąsiadujące pokoje</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M2 12h20"/></svg>Klimatyzacja</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><circle cx="12" cy="20" r="1"/></svg>Szybkie Wi-Fi</span>
+        </div>
+        <div class="room-cta">
+          <a href="#kontakt" class="btn btn-primary btn-sm">Zapytaj o dostępność</a>
+          <span style="font-size:0.86rem;color:var(--stone);align-self:center;">Indywidualnie dobrana aranżacja</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad hall" id="sala">
+  <div class="container">
+    <div class="hall-grid">
+      <div class="hall-photo-stack reveal">
+        <div class="hall-photo-main">
+          <img src="http://www.hoteldyminy.pl/uploads/off_dir/f317f55904c14d35b51b971670e5af23.jpg" alt="Sala bankietowa Hotelu Dyminy przygotowana na wesele" loading="lazy">
+          <div class="hall-capacity"><div class="n">300</div><div class="l">gości</div></div>
+        </div>
+        <div class="hall-photo-float">
+          <img src="http://www.hoteldyminy.pl/uploads/off_dir/04f5f90e8e308176ff07adf30c6e5501.jpg" alt="Impreza okolicznościowa w Hotelu Dyminy" loading="lazy">
+        </div>
+      </div>
+      <div class="hall-text reveal">
+        <p class="eyebrow on-dark">SALA BANKIETOWO-KONFERENCYJNA</p>
+        <h2 style="font-size:clamp(1.9rem,3.3vw,2.6rem);color:#fff;margin-bottom:22px;">Jedna sala. <span class="italic-accent">Setki możliwości.</span></h2>
+        <p class="lead">Elegancka, klimatyzowana sala pomieści do 300 gości i swobodnie dostosuje się do każdej okazji. Stoły okrągłe, kwadratowe lub prostokątne, scena dla zespołu i pełna dowolność aranżacji.</p>
+        <div class="occasion-grid">
+          <div class="occasion-pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7z"/></svg>Wesela do 300 gości</div>
+          <div class="occasion-pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>Komunie i chrzciny</div>
+          <div class="occasion-pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>Studniówki i bale</div>
+          <div class="occasion-pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>Konferencje i szkolenia</div>
+          <div class="occasion-pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Imprezy integracyjne</div>
+        </div>
+        <div class="hall-perk">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <p><strong>Prezent ślubny od nas:</strong> Młoda Para otrzymuje pokój dwuosobowy na noc poślubną, a Goście weselni mogą skorzystać z noclegu w promocyjnej cenie. Sala wyposażona jest też w projektor, flipchart i nagłośnienie — gotowa na konferencję czy szkolenie.</p>
+        </div>
+        <div class="hall-ctas">
+          <a href="#kontakt" class="btn btn-primary">Zapytaj o termin i wycenę</a>
+          <a href="tel:+48500658900" class="btn btn-outline-light">Zadzwoń: 500 658 900</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="udogodnienia">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">UDOGODNIENIA</p>
+      <h2>Wszystko, czego potrzeba na udany pobyt</h2>
+      <p>Proste, sprawdzone rzeczy, które realnie ułatwiają pobyt — niezależnie od tego, czy jesteście Państwo u nas na jedną noc, czy na cały weekend.</p>
+    </div>
+    <div class="amenity-grid reveal">
+      <div class="amenity-cell">
+        <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="6" width="20" height="13" rx="2"/><path d="M3 11h18"/><circle cx="7" cy="15" r="1"/></svg></span>
+        <h4>Bezpłatny parking</h4>
+        <p>Duży, strzeżony teren dla samochodów osobowych i autokarów, tuż przy obiekcie.</p>
+      </div>
+      <div class="amenity-cell">
+        <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 9a15 15 0 0 1 20 0"/><circle cx="12" cy="20" r="1"/></svg></span>
+        <h4>Szybkie Wi-Fi</h4>
+        <p>Bezprzewodowy internet dostępny w pokojach i częściach wspólnych obiektu.</p>
+      </div>
+      <div class="amenity-cell">
+        <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></span>
+        <h4>Śniadania</h4>
+        <p>Bufet szwedzki lub zestaw, w cenie pobytu, serwowane każdego ranka.</p>
+      </div>
+      <div class="amenity-cell">
+        <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><circle cx="12" cy="12" r="5"/></svg></span>
+        <h4>Klimatyzacja</h4>
+        <p>Indywidualnie sterowana w każdym pokoju — komfort niezależnie od pory roku.</p>
+      </div>
+      <div class="amenity-cell">
+        <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8 6 4 9 4 14a8 8 0 0 0 16 0c0-5-4-8-8-12z"/></svg></span>
+        <h4>Ogród i wiata grillowa</h4>
+        <p>Zielony teren wokół hotelu z miejscem na ognisko i grilla — idealny na integrację.</p>
+      </div>
+      <div class="amenity-cell">
+        <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+        <h4>Recepcja 24 godziny</h4>
+        <p>Jesteśmy do dyspozycji o każdej porze dnia i nocy — przyjazd o dowolnej godzinie.</p>
+      </div>
+      <div class="amenity-cell">
+        <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="10" y1="6" x2="14" y2="6"/><line x1="10" y1="18" x2="14" y2="18"/></svg></span>
+        <h4>Winda</h4>
+        <p>Łatwy dostęp do pokoi na wszystkich kondygnacjach budynku.</p>
+      </div>
+      <div class="amenity-cell">
+        <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><circle cx="4" cy="11" r="2"/><circle cx="7" cy="18" r="2"/><path d="M9 17c0-3 2-5 5-5"/></svg></span>
+        <h4>Zwierzęta mile widziane</h4>
+        <p>Akceptujemy zwierzęta na życzenie — prosimy o wcześniejszą informację.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="galeria" style="background:var(--cream-dark);">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">GALERIA</p>
+      <h2>Zobacz Hotel Dyminy</h2>
+      <p>Wnętrza, pokoje, sala bankietowa i otoczenie hotelu — zerknijcie Państwo, zanim zarezerwujecie.</p>
+    </div>
+    <div class="gallery-grid reveal" id="galleryGrid">
+      <figure class="g-big" data-full="http://www.hoteldyminy.pl/uploads/off_dir/f317f55904c14d35b51b971670e5af23.jpg">
+        <img src="http://www.hoteldyminy.pl/uploads/off_dir/f317f55904c14d35b51b971670e5af23.jpg" alt="Sala bankietowa" loading="lazy"><figcaption>Sala bankietowa</figcaption>
+      </figure>
+      <figure data-full="http://www.hoteldyminy.pl/uploads/pok_dir/3fa2c0f938d4771e2719cf03226cfad9.jpg">
+        <img src="http://www.hoteldyminy.pl/uploads/pok_dir/3fa2c0f938d4771e2719cf03226cfad9.jpg" alt="Pokój dwuosobowy" loading="lazy"><figcaption>Pokój dwuosobowy</figcaption>
+      </figure>
+      <figure data-full="http://www.hoteldyminy.pl/uploads/gals/galeria__0_26019800_1472647440/bg_image_0_21642700_1474472912.jpg">
+        <img src="http://www.hoteldyminy.pl/uploads/gals/galeria__0_26019800_1472647440/bg_image_0_21642700_1474472912.jpg" alt="Wnętrze hotelu" loading="lazy"><figcaption>Wnętrza hotelu</figcaption>
+      </figure>
+      <figure data-full="http://www.hoteldyminy.pl/uploads/off_dir/611ddf83e8b0622bcc6fe58308ea470b.jpg">
+        <img src="http://www.hoteldyminy.pl/uploads/off_dir/611ddf83e8b0622bcc6fe58308ea470b.jpg" alt="Sala konferencyjna" loading="lazy"><figcaption>Sala konferencyjna</figcaption>
+      </figure>
+      <figure data-full="http://www.hoteldyminy.pl/uploads/gals/galeria__0_26019800_1472647440/bg_image_0_55859100_1474472918.jpg">
+        <img src="http://www.hoteldyminy.pl/uploads/gals/galeria__0_26019800_1472647440/bg_image_0_55859100_1474472918.jpg" alt="Otoczenie hotelu" loading="lazy"><figcaption>Otoczenie hotelu</figcaption>
+      </figure>
+      <figure data-full="http://www.hoteldyminy.pl/uploads/gals/galeria__0_49427500_1472647430/bg_image_0_17472800_1474457143.jpg">
+        <img src="http://www.hoteldyminy.pl/uploads/gals/galeria__0_49427500_1472647430/bg_image_0_17472800_1474457143.jpg" alt="Wesele w Hotelu Dyminy" loading="lazy"><figcaption>Przyjęcie weselne</figcaption>
+      </figure>
+      <figure class="g-big" data-full="http://www.hoteldyminy.pl/uploads/pok_dir/dadf3ebb80982c907bb8c2f972fce636.jpg">
+        <img src="http://www.hoteldyminy.pl/uploads/pok_dir/dadf3ebb80982c907bb8c2f972fce636.jpg" alt="Pokój jednoosobowy" loading="lazy"><figcaption>Pokój jednoosobowy</figcaption>
+      </figure>
+      <figure data-full="http://www.hoteldyminy.pl/uploads/gals/galeria__0_26019800_1472647440/bg_image_0_06336800_1474472933.jpg">
+        <img src="http://www.hoteldyminy.pl/uploads/gals/galeria__0_26019800_1472647440/bg_image_0_06336800_1474472933.jpg" alt="Detal wnętrza" loading="lazy"><figcaption>Detale wnętrz</figcaption>
+      </figure>
+      <figure data-full="http://www.hoteldyminy.pl/uploads/gals/galeria__0_33598400_1472647449/bg_image_0_82535900_1474459658.jpg">
+        <img src="http://www.hoteldyminy.pl/uploads/gals/galeria__0_33598400_1472647449/bg_image_0_82535900_1474459658.jpg" alt="Impreza okolicznościowa" loading="lazy"><figcaption>Imprezy okolicznościowe</figcaption>
+      </figure>
+      <figure data-full="http://www.hoteldyminy.pl/uploads/pok_dir/0c6659bab22eb32c4d56cf946c442158.jpg">
+        <img src="http://www.hoteldyminy.pl/uploads/pok_dir/0c6659bab22eb32c4d56cf946c442158.jpg" alt="Pokój trzyosobowy" loading="lazy"><figcaption>Pokój trzyosobowy</figcaption>
+      </figure>
+      <figure data-full="http://www.hoteldyminy.pl/uploads/gals/galeria__0_26019800_1472647440/bg_image_0_26889300_1474472940.jpg">
+        <img src="http://www.hoteldyminy.pl/uploads/gals/galeria__0_26019800_1472647440/bg_image_0_26889300_1474472940.jpg" alt="Wnętrze hotelu" loading="lazy"><figcaption>Wnętrza hotelu</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad biz" id="dla-firm">
+  <div class="container">
+    <div class="biz-grid">
+      <div class="reveal">
+        <p class="eyebrow">DLA FIRM I GRUP</p>
+        <h2 style="font-size:clamp(1.9rem,3.3vw,2.5rem);">Konferencje, szkolenia i wyjazdy integracyjne</h2>
+        <p style="color:var(--stone);margin-top:16px;font-size:1.05rem;line-height:1.7;">Organizujecie Państwo konferencję, szkolenie albo wyjazd integracyjny dla zespołu? Mamy przestrzeń, zaplecze techniczne i doświadczenie, by wszystko poszło sprawnie.</p>
+        <div class="biz-list">
+          <div class="biz-item"><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><p><strong>Sala na 300 osób</strong> — z projektorem, flipchartem i nagłośnieniem, gotowa na seminarium, sympozjum lub szkolenie.</p></div>
+          <div class="biz-item"><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><p><strong>Kameralna sala na ok. 20 osób</strong> — na dyskretne negocjacje i spotkania zarządu.</p></div>
+          <div class="biz-item"><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><p><strong>Pakiety konferencyjne</strong> — bufet, biznes lunch lub obiad, według menu lub indywidualnego zamówienia.</p></div>
+          <div class="biz-item"><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><p><strong>Noclegi grupowe</strong> w preferencyjnych cenach dla uczestników wydarzenia.</p></div>
+          <div class="biz-item"><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><p><strong>Bezpłatny parking dla autokarów</strong> — wygodny dojazd dla większych grup.</p></div>
+          <div class="biz-item"><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><p><strong>Faktury VAT i indywidualna wycena</strong> — szybka odpowiedź na zapytanie ofertowe.</p></div>
+        </div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="#kontakt" class="btn btn-outline-dark">Wyślij zapytanie ofertowe</a>
+          <a href="tel:+48413611400" class="btn-text">Zadzwoń: 41 36 11 400</a>
+        </div>
+      </div>
+      <div class="biz-photo reveal">
+        <img src="http://www.hoteldyminy.pl/uploads/gals/galeria__0_10998500_1476710996/bg_image_0_61224200_1476711485.jpg" alt="Sala konferencyjna Hotelu Dyminy" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="lokalizacja">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">LOKALIZACJA I KONTAKT</p>
+      <h2>Łatwo nas znaleźć</h2>
+      <p>Jesteśmy przy trasie E73 Kielce–Tarnów — dogodny dojazd z każdego kierunku, blisko centrum Kielc i atrakcji regionu świętokrzyskiego.</p>
+    </div>
+    <div class="location-grid" id="kontakt">
+      <div class="contact-card reveal">
+        <div class="contact-line">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><h4>Adres</h4><span>ul. Ściegiennego 264, 25-116 Kielce</span></div>
+        </div>
+        <div class="contact-line">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div><h4>Recepcja hotelu</h4><a href="tel:+48413611400">41 36 11 400</a></div>
+        </div>
+        <div class="contact-line">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <div><h4>Wesela i imprezy okolicznościowe</h4><a href="tel:+48500658900">500 658 900</a></div>
+        </div>
+        <div class="contact-line">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+          <div><h4>E-mail</h4><a href="mailto:hotel@dyminy.pl">hotel@dyminy.pl</a></div>
+        </div>
+        <div class="contact-line">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+          <div><h4>Restauracja</h4><a href="tel:+48413618642">41 36 18 642</a></div>
+        </div>
+        <div class="contact-line">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div><h4>Recepcja</h4><span>czynna 24 godziny na dobę, 7 dni w tygodniu</span></div>
+        </div>
+        <div style="margin-top:24px;">
+          <a href="tel:+48413611400" class="btn btn-primary" style="width:100%;">Zadzwoń teraz</a>
+        </div>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d67848.85461543674!2d20.57121083752909!3d50.80433510806113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4717891be91aba57%3A0xf9d6f2042c39989a!2sZajazd+Dyminy!5e0!3m2!1spl!2spl!4v1471876854203" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Hotel Dyminy, Kielce"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="opinie" style="background:var(--cream-dark);">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">OPINIE GOŚCI</p>
+      <h2>Co mówią o nas goście</h2>
+      <p>Wracają do nas pary, które świętowały u nas swój ślub, firmy organizujące cykliczne szkolenia i podróżni w trasie między Kielcami a Tarnowem.</p>
+    </div>
+    <div class="reviews-track reveal">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="quote">Salę bankietową mieliśmy zarezerwowaną na wesele i naprawdę nic nas nie zaskoczyło — obsługa pilnowała każdego detalu, a goście chwalili jedzenie do końca przyjęcia.</p>
+        <div class="review-who">
+          <div class="review-avatar">A</div>
+          <div><div class="name">Aleksandra K.</div><div class="occ">Wesele, Hotel Dyminy</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="quote">Organizowaliśmy tu szkolenie dla 40 osób. Sala konferencyjna w pełni wyposażona, duży parking dla naszego busa i sprawna komunikacja przed wydarzeniem.</p>
+        <div class="review-who">
+          <div class="review-avatar">M</div>
+          <div><div class="name">Marek T.</div><div class="occ">Konferencja firmowa</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="quote">Nocowaliśmy w trasie do Krakowa — pokój czysty, ciche otoczenie mimo bliskości drogi, a śniadanie zdecydowanie lepsze, niż się spodziewaliśmy po typowym noclegu przydrożnym.</p>
+        <div class="review-who">
+          <div class="review-avatar">P</div>
+          <div><div class="name">Piotr W.</div><div class="occ">Nocleg w trasie</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand">Hotel Dyminy<small>KIELCE · NOCLEGI &amp; EVENTY</small></span>
+        <p>Hotel i sala bankietowo-konferencyjna przy trasie E73 Kielce–Tarnów. Noclegi, wesela, konferencje i imprezy okolicznościowe od 2012 roku.</p>
+        <div class="footer-social">
+          <a href="http://www.facebook.com/HotelDyminy" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Nawigacja</h5>
+        <ul>
+          <li><a href="#o-hotelu">O hotelu</a></li>
+          <li><a href="#pokoje">Pokoje</a></li>
+          <li><a href="#sala">Sala eventowa</a></li>
+          <li><a href="#udogodnienia">Udogodnienia</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Oferta</h5>
+        <ul>
+          <li><a href="#sala">Wesela</a></li>
+          <li><a href="#dla-firm">Konferencje</a></li>
+          <li><a href="#sala">Komunie i imprezy</a></li>
+          <li><a href="#dla-firm">Dla firm i grup</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Kontakt</h5>
+        <ul>
+          <li>ul. Ściegiennego 264, 25-116 Kielce</li>
+          <li><a href="tel:+48413611400">41 36 11 400</a> — recepcja</li>
+          <li><a href="tel:+48500658900">500 658 900</a> — eventy</li>
+          <li><a href="mailto:hotel@dyminy.pl">hotel@dyminy.pl</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Hotel Dyminy. Wszystkie prawa zastrzeżone.</span>
+      <span>ul. Ściegiennego 264, 25-116 Kielce</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-sticky">
+  <a href="tel:+48413611400" class="btn btn-outline-dark btn-sm">Zadzwoń</a>
+  <a href="#kontakt" class="btn btn-primary btn-sm">Zarezerwuj</a>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Zamknij podgląd">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <img src="" alt="Powiększone zdjęcie" id="lightboxImg">
+</div>
+
+<script>
+document.querySelectorAll('img').forEach(function(img){
+  img.addEventListener('error', function(){ img.style.display='none'; });
+});
+var header = document.getElementById('siteHeader');
+function onScroll(){
+  if(window.scrollY > 60){ header.classList.add('scrolled'); }
+  else { header.classList.remove('scrolled'); }
+}
+window.addEventListener('scroll', onScroll);
+onScroll();
+var navToggle = document.getElementById('navToggle');
+var mobilePanel = document.getElementById('mobilePanel');
+var mobileClose = document.getElementById('mobileClose');
+navToggle.addEventListener('click', function(){ mobilePanel.classList.add('open'); document.body.style.overflow='hidden'; });
+mobileClose.addEventListener('click', closeMobile);
+mobilePanel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMobile); });
+function closeMobile(){ mobilePanel.classList.remove('open'); document.body.style.overflow=''; }
+document.querySelectorAll('.faq-item').forEach(function(item){
+  var q = item.querySelector('.faq-q');
+  var a = item.querySelector('.faq-a');
+  function setHeight(){ a.style.maxHeight = item.classList.contains('open') ? a.scrollHeight + 'px' : '0px'; }
+  setHeight();
+  q.addEventListener('click', function(){
+    var willOpen = !item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(other){
+      other.classList.remove('open');
+      other.querySelector('.faq-a').style.maxHeight = '0px';
+    });
+    if(willOpen){ item.classList.add('open'); setHeight(); }
+  });
+  window.addEventListener('resize', function(){ if(item.classList.contains('open')) setHeight(); });
+});
+var lightbox = document.getElementById('lightbox');
+var lightboxImg = document.getElementById('lightboxImg');
+document.querySelectorAll('#galleryGrid figure').forEach(function(fig){
+  fig.addEventListener('click', function(){
+    var src = fig.getAttribute('data-full');
+    lightboxImg.src = src;
+    lightbox.classList.add('open');
+  });
+});
+document.getElementById('lightboxClose').addEventListener('click', function(){ lightbox.classList.remove('open'); });
+lightbox.addEventListener('click', function(e){ if(e.target === lightbox) lightbox.classList.remove('open'); });
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape') lightbox.classList.remove('open'); });
+var revealEls = document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+  revealEls.forEach(function(el){ io.observe(el); });
+} else {
+  revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+}
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var id = a.getAttribute('href');
+    if(id.length > 1){
+      var target = document.querySelector(id);
+      if(target){
+        e.preventDefault();
+        var y = target.getBoundingClientRect().top + window.pageYOffset - 86;
+        window.scrollTo({top:y, behavior:'smooth'});
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>
